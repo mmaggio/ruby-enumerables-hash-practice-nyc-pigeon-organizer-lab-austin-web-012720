@@ -24,13 +24,15 @@ consolidated_name_array.each do |name|
     memo 
   end
   
+  # internal loop through each gender
+  
   
 end
 
 
 
 
-# gender
+
 
 # living
 

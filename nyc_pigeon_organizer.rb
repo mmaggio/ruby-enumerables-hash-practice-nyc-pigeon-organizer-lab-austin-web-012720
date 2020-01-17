@@ -29,28 +29,19 @@ consolidated_name_array.each do |name|
    data[:gender].reduce({}) do |memo, pair|
     gender_symbol = pair[0]
     gender = gender_symbol.to_s
-    pigeon_names_hash[name][:gender] << color if data[:gender][pair[0]].include?(name)
+    pigeon_names_hash[name][:gender] << gender if data[:gender][pair[0]].include?(name)
     memo 
   end
   
   # internal loop through each lives
   
-  data[:color].reduce({}) do |memo, pair|
-    color_symbol = pair[0]
-    color = color_symbol.to_s
-    pigeon_names_hash[name][:color] << color if data[:color][pair[0]].include?(name)
+  data[:lives].reduce({}) do |memo, pair|
+    lives_symbol = pair[0]
+    lives = lives_symbol.to_s
+    pigeon_names_hash[name][:lives] << lives if data[:lives][pair[0]].include?(name)
     memo 
   end
   
-end
-
-
-
-
-
-
-
-
-
-pigeon_names_hash
+ end
+ pigeon_names_hash
 end

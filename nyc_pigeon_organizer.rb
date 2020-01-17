@@ -16,19 +16,19 @@ pigeon_names_hash.each do |key, value|
 
 consolidated_name_array.each do |name|
 
-#internal loop through each color
-  pigeon_data[:color].reduce({}) do |memo, pair|
+  #internal loop through each color
+  data[:color].reduce({}) do |memo, pair|
     color_symbol = pair[0]
     color = color_symbol.to_s
-    pigeon_names_hash[name][:color] << color if pigeon_data[:color][pair[0]].include?(name)
+    pigeon_names_hash[name][:color] << color if data[:color][pair[0]].include?(name)
     memo 
   end
+  
+  
 end
-pigeon_names_hash
 
 
 
-# color
 
 # gender
 
